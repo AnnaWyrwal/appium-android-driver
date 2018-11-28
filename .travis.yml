@@ -1,5 +1,4 @@
 language: android
-dist: precise
 addons:
     apt:
       sources:
