@@ -7,19 +7,32 @@ addons:
         - g++-4.9
 android:
   components:
-    # use the latest revision of Android SDK Tools
+    # # use the latest revision of Android SDK Tools
+    # - platform-tools
+    # - tools
+    #
+    # # Additional components
+    # - extra-google-google_play_services
+    # - extra-google-m2repository
+    # - extra-android-m2repository
+    # - addon-google_apis-google-19
+    #
+    # # Specify at least one system image,
+    # # if you need to run emulator(s) during your tests
+    # - sys-img-armeabi-v7a-android-22
+
+    - tools
     - platform-tools
     - tools
-
-    # Additional components
+    - build-tools-26.0.0
+    - android-25
     - extra-google-google_play_services
     - extra-google-m2repository
     - extra-android-m2repository
-    - addon-google_apis-google-19
-
-    # Specify at least one system image,
-    # if you need to run emulator(s) during your tests
-    - sys-img-armeabi-v7a-android-22
+  licenses:
+    - android-sdk-preview-license-.+
+    - android-sdk-license-.+
+    - google-gdk-license-.+
 env:
   global:
     - _FORCE_LOGS=1
